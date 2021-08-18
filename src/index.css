@@ -1,13 +1,212 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+  background-color: #d4d4d4 !important;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+td:not(:nth-child(1)) {
+  text-align: center;
+  margin: auto 0;
+}
+
+td {
+  cursor: pointer;
+}
+
+th {
+  text-align: center !important;
+}
+
+input {
+  margin: 2vh 0 !important;
+  border-radius: 5px !important;
+  padding: 5px;
+}
+
+button {
+  width: fit-content;
+  background-color: #212529;
+  color: #d4d4d4;
+  border: unset !important;
+  font-weight: 500;
+  border-radius: 5px !important;
+}
+
+label {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.heading {
+  text-align: center;
+  margin: 15vh auto 5vh;
+}
+
+.heading .cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 5vh auto;
+  gap: 2vw;
+}
+
+.heading .cards .singlecard {
+  display: flex;
+  box-shadow: black 10px 16px 17px -3px;
+  max-width: 20rem;
+  align-self: center;
+  justify-content: center;
+}
+
+.main {
+  width: 97%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 33% 64%;
+  gap: 2vw;
+}
+
+@media only screen and (max-width: 680px) {
+  .main {
+    display: unset !important;
+  }
+  .main .sidebar {
+    position: unset !important;
+    height: 25vh !important;
+  }
+  .main .sidebar .categories {
+    position: sticky;
+    top: 15vh;
+  }
+  .main .sidebar .resources {
+    flex-direction: row !important;
+    height: 50% !important;
+  }
+  .main .sidebar .resources h5 {
+    padding: 2vh;
+  }
+}
+
+.main .sidebar {
+  height: 70vh;
+  position: sticky;
+  top: 15vh;
+  margin-bottom: 5vh;
+}
+
+.main .sidebar .categories {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  border-radius: 5px;
+  box-shadow: black 10px 16px 17px -3px;
+  background-color: #212529;
+}
+
+.main .sidebar .categories .singleCat {
+  background-color: #d4d4d4;
+  padding: 5px;
+  margin: 0.5vw 0.5vw;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.main .sidebar .resources {
+  border-radius: 5px;
+  background-color: #212529;
+  margin-top: 2vh;
+  box-shadow: black 10px 16px 17px -3px;
+  height: 70%;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.main .sidebar .resources h5 {
+  cursor: pointer;
+}
+
+.main .table {
+  border-radius: 15px !important;
+}
+
+@media only screen and (max-width: 800px) {
+  .main .table .hide {
+    display: none;
+  }
+  .main .table .avatar {
+    width: 10vw !important;
+  }
+}
+
+.main .table .avatar {
+  width: 3vw;
+  border-radius: 5px;
+}
+
+.details {
+  width: 95%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media only screen and (max-width: 850px) {
+  .details .dao {
+    display: unset !important;
+  }
+  .details .dao img {
+    width: 50% !important;
+    margin-bottom: 2vh;
+  }
+  .details .dao h5 {
+    font-size: 15px !important;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .details .dao h3 {
+    font-size: 1rem !important;
+  }
+  .details .dao h5 {
+    font-size: 10px !important;
+  }
+}
+
+.details .dao {
+  background-color: #212529;
+  color: #d4d4d4;
+  width: 50vw;
+  border-radius: 15px;
+  text-align: center;
+  padding: 2vw;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 1vw;
+  box-shadow: black 10px 16px 17px -3px;
+}
+
+.details .dao img {
+  border-radius: 5px;
+  width: 100%;
+}
+
+.details .dao .daodet {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.AddingForm {
+  width: 50%;
+  margin: 10vh auto;
+}
+
+.AddingForm .form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
 }

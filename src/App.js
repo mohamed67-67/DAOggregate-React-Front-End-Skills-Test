@@ -1,24 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+import { Fragment } from 'react';
+import Heading from './components/Heading';
+import NavBar from './components/NavBar';
+import SideBar from './components/SideBar';
+import TableComp from './components/TableComp';
+import {BrowserRouter as Router,Route,Switch} from 'react-router-dom'
+import Resources from './components/Resources';
+import Details from './components/Details';
 
 function App() {
+  
+  
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Fragment>
+      <Router>
+      <NavBar/>
+      <Switch>
+          <Route path='/' exact><Heading/>
+            <div className="main">
+              <SideBar/>
+              <TableComp/>
+            </div>
+          </Route>
+          <Route path='/resources'>
+            <Resources/>
+          </Route>
+          <Route path='/dao/:id'>
+            <Details/>
+          </Route>
+      </Switch>
+      </Router>
+    </Fragment>
   );
 }
 

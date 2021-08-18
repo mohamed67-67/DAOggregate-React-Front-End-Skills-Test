@@ -1,0 +1,60 @@
+
+
+@mixin mainResponsive {
+    @media only screen and (max-width: 680px){
+        display: unset !important;
+        .sidebar{
+            position: unset !important;
+            height: 25vh !important;
+            .categories{
+                position: sticky;
+                top: 15vh;
+            }
+            .resources{
+                flex-direction: row !important;
+                height: 50% !important;
+                h5{
+                    padding: 2vh;
+                }
+            }
+        }
+    }
+}
+
+@mixin TableResponsive {
+    @media only screen and (max-width: '800px'){
+        .hide{
+            display: none;
+        }
+        .avatar{
+            width: 10vw !important;
+        }
+    }
+}
+
+@mixin detailsResponsive {
+    @media only screen and (max-width: 850px){
+        .dao{
+            display: unset !important;
+            img{
+                width: 50% !important;
+                margin-bottom: 2vh;
+            }
+            h5{
+                font-size: 15px !important;
+            }
+        }
+    }
+    
+    @media only screen and (max-width: 450px){
+        .dao{
+            h3{
+                font-size: 1rem !important;
+            }
+            h5{
+                font-size: 10px !important;
+            }
+        }
+    }
+
+}
